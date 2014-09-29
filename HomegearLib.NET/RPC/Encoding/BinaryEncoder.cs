@@ -10,10 +10,10 @@ namespace HomegearLib.RPC.Encoding
     {
         public void EncodeInteger(List<byte> encodedData, int value)
         {
-            encodedData.Add((byte)(value >> 24));
-            encodedData.Add((byte)((value >> 16) & 0xFF));
-            encodedData.Add((byte)((value >> 8) & 0xFF));
-            encodedData.Add((byte)(value & 0xFF));
+			encodedData.Add((byte)((value >> 24) & 0xFF));
+			encodedData.Add((byte)((value >> 16) & 0xFF));
+			encodedData.Add((byte)((value >> 8) & 0xFF));
+			encodedData.Add((byte)(value & 0xFF));
         }
 
         public void EncodeByte(List<byte> encodedData, byte value)
